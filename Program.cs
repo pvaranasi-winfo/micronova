@@ -1,13 +1,6 @@
-
-
-using Azure.Identity;
-using Azure.Security.KeyVault.Secrets;
-using Microsoft.Extensions.Azure;
-
 var builder = FunctionsApplication.CreateBuilder(args);
 
 builder.ConfigureFunctionsWebApplication();
-
 
 var config = builder.Configuration;
 
@@ -37,8 +30,5 @@ builder.UseMiddleware<GlobalExceptionMiddleware>();
 
 
 builder.UseDefaultWorkerMiddleware();
-
-
-
 
 builder.Build().Run();
